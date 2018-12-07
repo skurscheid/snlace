@@ -1,0 +1,41 @@
+{
+    "date":"2018-11-12",
+    "dataset":"demo",
+
+    "genome_name":"O.ari",
+    "genome_dir":"/home/sarah/packages/necklace/demo_data/data",
+    "genome_file":"Ovis_aries.Oar_v3.1.dna.toplevel.chr14.fa",
+
+    "annot_files":["/home/sarah/packages/necklace/demo_data/data/Ovis_aries.Oar_v3.1.90.chr14.gtf"],
+
+    "fastq_dir":"/home/sarah/packages/necklace/demo_data/data",
+    "samples":[ "SRR2932539_small",    "SRR2932540_small",    "SRR2932541_small",
+                "SRR2932542_small",    "SRR2932561_small",    "SRR2932562_small",
+                "SRR2932563_small",    "SRR2932564_small"],
+    "fastq_suffix":".fastq.gz",
+    "pair_notation":"",
+
+    "relatedsp_names":"H.sap",
+    "relatedsp_genome_file":
+        "/home/sarah/packages/necklace/demo_data/data/Homo_sapiens.GRCh38.dna.toplevel.chr19.fa",
+    "relatedsp_annot_files":[
+        "/home/sarah/packages/necklace/demo_data/data/Homo_sapiens.GRCh38.90.CDS.chr19.gtf"],
+    "relatedsp_superT_dir":"/home/sarah/references/supertranscriptomes",
+
+    "params":{
+        "hisat-build":"-q",
+        "hisat_initial":"",
+        "stringtie":"",
+        "stringtie_merge":"",
+        "trinity":"--max_memory 7G",
+        "blat":"-minScore=200 -minIdentity=98",
+        "blat_related":"-t=dnax -q=dnax -minScore=200",
+        "hisat_final":"--pen-noncansplice 0",
+        "featureCounts_blocks":"--primary -p",
+        "featureCounts_genes":"--primary -p --fraction -O"
+    },
+    "home_dirs":{
+        "trinity":"/home/sarah/packages/conda/miniconda/envs/nlace1/opt/trinity-2.6.6" 
+    },
+    "max_threads":4
+}

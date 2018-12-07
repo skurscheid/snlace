@@ -1,0 +1,41 @@
+{
+    "date":"2018-12-04",
+    "dataset":"dryruntest",
+
+    "genome_name":"M",
+    "genome_dir":"output_data/workflows/snecklace/tests",
+    "genome_file":"M.fa",
+
+    "annot_files":["output_data/workflows/snecklace/tests/M1.gtf",
+                   "output_data/workflows/snecklace/tests/M2.gtf"],
+
+    "raw_dir":"output_data/workflows/snecklace/tests",
+
+    "fastq_dir":"output_data/workflows/snecklace/tests/qc/trimmed",
+    "samples":["s1","s2","s3"],
+    "fastq_suffix":"_crazy.fastq",
+    "pair_notation":"P",
+
+    "relatedsp_names":"H",
+    "relatedsp_genome_file":"output_data/workflows/snecklace/tests/H.fa",
+    "relatedsp_annot_files":["output_data/workflows/snecklace/tests/H1.gtf",
+                             "output_data/workflows/snecklace/tests/H2.gtf"],
+    "relatedsp_superT_dir":"output_data/workflows/snecklace/tests/superTranscriptomes",
+
+    "params":{
+        "hisat-build":"-q",
+        "hisat_initial":"",
+        "stringtie":"",
+        "stringtie_merge":"",
+        "trinity":"--max_memory 50G",
+        "blat":"-minScore=200 -minIdentity=98",
+        "blat_related":"-t=dnax -q=dnax -minScore=200",
+        "hisat_final":"--pen-noncansplice 0",
+        "featureCounts_blocks":"--primary -p",
+        "featureCounts_genes":"--primary -p --fraction -O"
+        },
+    "home_dirs":{
+        "trinity":"/usr/local/opt/trinity-2.8.4"
+	},
+    "max_threads":40
+}
