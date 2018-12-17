@@ -23,3 +23,6 @@
 
 #pblat test
 snakemake -s snecklace/pSnakefile -d ../snecklace07/data --configfile pconfig.json --cores 2 --use-conda -pr blat_relST_genomeST
+
+#local lace test
+snakemake -s snecklace/Snakefile -d ../snecklace07/data --configfile config.json --cores 4 --use-conda -pr run_lace
